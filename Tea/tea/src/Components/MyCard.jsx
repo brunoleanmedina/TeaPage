@@ -10,13 +10,16 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: '25vw',
+    minWidth: '25vw',
+    margin: '1vw'
   },
   media: {
-    height: 140,  
+    height: 140,
+    backgroundColor: "purple"  
   },
   limiter: {
-    width: 230,
+    width: '80%',
     whiteSpace: "nowrap",
     textOverflow: "ellipsis",
     overflow: "hidden",
@@ -24,7 +27,7 @@ const useStyles = makeStyles({
 
 });
 
-function MyCard({title}) {
+function MyCard({title, description}) {
     const classes = useStyles();
     
     return (
@@ -42,9 +45,8 @@ function MyCard({title}) {
               <Typography gutterBottom variant="h5" component="h2">
                 {title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-              Tipos de té y sus beneficios para la salud
-                urante miles de años el té ha formado parte del estilo de vida de personas de todo el mundo, que han buscado en esta bebida sus propiedades curativas, relajantes e inspiradoras y en el presente cada vez son más las investigaciones dirigidas a demostrar sus beneficios para la salud. Aunque en España las infusiones de manzanilla y poleo o menta sean quizá las más consumidas, el té tiene ya una gran cantidad de adeptos en sus distintas variedades.
+              <Typography className= {classes.limiter} variant="body2" color="textSecondary" component="p">
+                {description}
               </Typography>
             </CardContent>
               
