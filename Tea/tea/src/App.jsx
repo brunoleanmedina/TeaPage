@@ -5,6 +5,7 @@ import {makeStyles} from '@material-ui/core/styles'
 
 import NavBar from './Components/NavBar.jsx'
 import MyCard from './Components/MyCard'
+import MyFooter from './Components/MyFooter.jsx'
 import {Typography, Box} from '@material-ui/core/'
 
 const useStyles = makeStyles({
@@ -12,11 +13,12 @@ const useStyles = makeStyles({
 		margin: '20px 5vw 10px 5vw',
 	},
 	paragraphs: {
-		margin: '10px 5vw 20px 5vw',
+		margin: '10px 5vw 20px 6vw',
 	},
   box: {
 		display: 'flex',
 		flexWrap: 'wrap',
+		margin: '10px 5vw 10px 5vw',
 	},
 })
 
@@ -43,6 +45,9 @@ function App() {
 		<MyCard title="Hello word2" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
 		<MyCard title="Hello word3" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
 		<MyCard title="Hello word4" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
+	  </Box>
+	  <Box>
+	  <MyFooter/>
 	  </Box>
 	</ThemeProvider>
   );
