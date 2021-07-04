@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
-    backgroundColor: "purple"  
+    backgroundColor: "lime",  
   },
   limiter: {
     width: '80%',
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 
 });
 
-function MyCard({title, description}) {
+function MyCard({title, description, imgLink}) {
     const classes = useStyles();
     
     return (
@@ -36,7 +36,7 @@ function MyCard({title, description}) {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={imgLink}
               title="Contemplative Reptile"
             />
             </CardActionArea>

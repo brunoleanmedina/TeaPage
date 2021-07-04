@@ -8,20 +8,53 @@ import MyCard from './Components/MyCard'
 import MyFooter from './Components/MyFooter.jsx'
 import {Typography, Box} from '@material-ui/core/'
 
+import testImg from './img/GignerTea.png'
+
 const useStyles = makeStyles({
 	title: {
 		margin: '20px 5vw 10px 5vw',
 	},
 	paragraphs: {
 		margin: '10px 5vw 20px 6vw',
+		fontSize: '3vh',
 	},
   box: {
 		display: 'flex',
 		flexWrap: 'wrap',
 		margin: '10px 5vw 10px 5vw',
 	},
-})
+});
 
+const cardContent = [
+	{title: "Té verde",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "Té verde Matcha",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "Té blanco",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "Té de menta",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "Té de manzanilla",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "Té de hibisco",
+	description: "" ,
+	imgLink: "" ,
+	},
+	{title: "wea",
+	description: "weaeawqeaweaweae",
+	imgLink: "testImg"
+	}
+]
 
 function App() {
   const classes = useStyles();
@@ -41,10 +74,11 @@ function App() {
 		Una infusión que esté realizada en base a otra planta, cedrón, manzanilla, jengibre, anís, menta, por mencionar algunas, no es en realidad té, aunque se la señale de manera popular de esa forma. De hecho, el Código Alimentario Argentino, indica que la denominación genérica de té refiere exclusivamente al producto obtenido por el procesamiento de yemas, hojas, pecíolos y tallos tiernos de dicha especie vegetal.​
 	  </Typography>
 	  <Box component="div" className={classes.box}>
-		<MyCard title="Hello word1" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
-		<MyCard title="Hello word2" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
-		<MyCard title="Hello word3" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
-		<MyCard title="Hello word4" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo incidunt labore, quas alias quos enim odio. Quos, voluptatum fuga. Amet dolorem quam veniam, natus odio non quaerat distinctio tempora tenetur?"/>
+		{cardContent.map(
+			({title, description, imgLink, index}) => (
+				<MyCard key={index} title={title} description={description} imgLink={imgLink}></MyCard>
+			)
+		)}
 	  </Box>
 	  <Box>
 	  <MyFooter/>
